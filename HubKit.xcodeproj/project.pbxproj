@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C42492F12AAA5C400ED4DE7 /* HubKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C42492D12AAA5C400ED4DE7 /* HubKit.h */; };
+		2C42493012AAA5C400ED4DE7 /* HubKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42492E12AAA5C400ED4DE7 /* HubKit.m */; };
+		2C4249B012AAC68100ED4DE7 /* HKGithubAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4249AE12AAC68100ED4DE7 /* HKGithubAPI.h */; };
+		2C4249B112AAC68100ED4DE7 /* HKGithubAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4249AF12AAC68100ED4DE7 /* HKGithubAPI.m */; };
+		2C4249D012AACE6700ED4DE7 /* HKGithubUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4249CE12AACE6700ED4DE7 /* HKGithubUser.h */; };
+		2C4249D112AACE6700ED4DE7 /* HKGithubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4249CF12AACE6700ED4DE7 /* HKGithubUser.m */; };
+		2C424A1912AADDA600ED4DE7 /* HKGithubConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C424A1712AADDA600ED4DE7 /* HKGithubConnection.h */; };
+		2C424A1A12AADDA600ED4DE7 /* HKGithubConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C424A1812AADDA600ED4DE7 /* HKGithubConnection.m */; };
+		2C424AC712AAF30200ED4DE7 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C424ABC12AAF30200ED4DE7 /* JSON.h */; };
+		2C424AC812AAF30200ED4DE7 /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C424ABD12AAF30200ED4DE7 /* NSObject+SBJSON.h */; };
+		2C424AC912AAF30200ED4DE7 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C424ABE12AAF30200ED4DE7 /* NSObject+SBJSON.m */; };
+		2C424ACA12AAF30200ED4DE7 /* NSString+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C424ABF12AAF30200ED4DE7 /* NSString+SBJSON.h */; };
+		2C424ACB12AAF30200ED4DE7 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C424AC012AAF30200ED4DE7 /* NSString+SBJSON.m */; };
+		2C424ACC12AAF30200ED4DE7 /* SBJsonBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C424AC112AAF30200ED4DE7 /* SBJsonBase.h */; };
+		2C424ACD12AAF30200ED4DE7 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C424AC212AAF30200ED4DE7 /* SBJsonBase.m */; };
+		2C424ACE12AAF30200ED4DE7 /* SBJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C424AC312AAF30200ED4DE7 /* SBJsonParser.h */; };
+		2C424ACF12AAF30200ED4DE7 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C424AC412AAF30200ED4DE7 /* SBJsonParser.m */; };
+		2C424AD012AAF30200ED4DE7 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C424AC512AAF30200ED4DE7 /* SBJsonWriter.h */; };
+		2C424AD112AAF30200ED4DE7 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C424AC612AAF30200ED4DE7 /* SBJsonWriter.m */; };
+		AA747D9F0F9514B9006C5449 /* HubKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* HubKit_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C42492D12AAA5C400ED4DE7 /* HubKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubKit.h; sourceTree = "<group>"; };
+		2C42492E12AAA5C400ED4DE7 /* HubKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HubKit.m; sourceTree = "<group>"; };
+		2C4249AE12AAC68100ED4DE7 /* HKGithubAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKGithubAPI.h; sourceTree = "<group>"; };
+		2C4249AF12AAC68100ED4DE7 /* HKGithubAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKGithubAPI.m; sourceTree = "<group>"; };
+		2C4249CE12AACE6700ED4DE7 /* HKGithubUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKGithubUser.h; sourceTree = "<group>"; };
+		2C4249CF12AACE6700ED4DE7 /* HKGithubUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKGithubUser.m; sourceTree = "<group>"; };
+		2C424A1712AADDA600ED4DE7 /* HKGithubConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKGithubConnection.h; sourceTree = "<group>"; };
+		2C424A1812AADDA600ED4DE7 /* HKGithubConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKGithubConnection.m; sourceTree = "<group>"; };
+		2C424ABC12AAF30200ED4DE7 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		2C424ABD12AAF30200ED4DE7 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		2C424ABE12AAF30200ED4DE7 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		2C424ABF12AAF30200ED4DE7 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		2C424AC012AAF30200ED4DE7 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		2C424AC112AAF30200ED4DE7 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		2C424AC212AAF30200ED4DE7 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		2C424AC312AAF30200ED4DE7 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		2C424AC412AAF30200ED4DE7 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		2C424AC512AAF30200ED4DE7 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		2C424AC612AAF30200ED4DE7 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* HubKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubKit_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libHubKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHubKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libHubKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* HubKit */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				2C424AB712AAF2C300ED4DE7 /* Libraries */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = HubKit;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2C42492D12AAA5C400ED4DE7 /* HubKit.h */,
+				2C42492E12AAA5C400ED4DE7 /* HubKit.m */,
+				2C4249AE12AAC68100ED4DE7 /* HKGithubAPI.h */,
+				2C4249AF12AAC68100ED4DE7 /* HKGithubAPI.m */,
+				2C4249CE12AACE6700ED4DE7 /* HKGithubUser.h */,
+				2C4249CF12AACE6700ED4DE7 /* HKGithubUser.m */,
+				2C424A1712AADDA600ED4DE7 /* HKGithubConnection.h */,
+				2C424A1812AADDA600ED4DE7 /* HKGithubConnection.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2C424AB712AAF2C300ED4DE7 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2C424AB812AAF2CD00ED4DE7 /* JSON */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		2C424AB812AAF2CD00ED4DE7 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				2C424ABC12AAF30200ED4DE7 /* JSON.h */,
+				2C424ABD12AAF30200ED4DE7 /* NSObject+SBJSON.h */,
+				2C424ABE12AAF30200ED4DE7 /* NSObject+SBJSON.m */,
+				2C424ABF12AAF30200ED4DE7 /* NSString+SBJSON.h */,
+				2C424AC012AAF30200ED4DE7 /* NSString+SBJSON.m */,
+				2C424AC112AAF30200ED4DE7 /* SBJsonBase.h */,
+				2C424AC212AAF30200ED4DE7 /* SBJsonBase.m */,
+				2C424AC312AAF30200ED4DE7 /* SBJsonParser.h */,
+				2C424AC412AAF30200ED4DE7 /* SBJsonParser.m */,
+				2C424AC512AAF30200ED4DE7 /* SBJsonWriter.h */,
+				2C424AC612AAF30200ED4DE7 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* HubKit_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* HubKit_Prefix.pch in Headers */,
+				2C42492F12AAA5C400ED4DE7 /* HubKit.h in Headers */,
+				2C4249B012AAC68100ED4DE7 /* HKGithubAPI.h in Headers */,
+				2C4249D012AACE6700ED4DE7 /* HKGithubUser.h in Headers */,
+				2C424A1912AADDA600ED4DE7 /* HKGithubConnection.h in Headers */,
+				2C424AC712AAF30200ED4DE7 /* JSON.h in Headers */,
+				2C424AC812AAF30200ED4DE7 /* NSObject+SBJSON.h in Headers */,
+				2C424ACA12AAF30200ED4DE7 /* NSString+SBJSON.h in Headers */,
+				2C424ACC12AAF30200ED4DE7 /* SBJsonBase.h in Headers */,
+				2C424ACE12AAF30200ED4DE7 /* SBJsonParser.h in Headers */,
+				2C424AD012AAF30200ED4DE7 /* SBJsonWriter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* HubKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "HubKit" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+				2C42494512AAAEC000ED4DE7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HubKit;
+			productName = HubKit;
+			productReference = D2AAC07E0554694100DB518D /* libHubKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "HubKit" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* HubKit */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* HubKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C42494512AAAEC000ED4DE7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Build the doxygen documentation for the project and load the docset into Xcode.\n\nDOCSET_PATH=$SOURCE_ROOT/build/$PRODUCT_NAME.docset\n\nif ! [ -f $SOURCE_ROOT/Doxyfile ]\nthen\n\techo doxygen config file does not exist\n\t$DOXYGEN_PATH -g $SOURCE_ROOT/Doxyfile\nfi\n\ncp $SOURCE_ROOT/Doxyfile $TEMP_DIR/Doxyfile\n\necho \"INPUT = \\\"$SOURCE_ROOT\\\"\" >> $TEMP_DIR/Doxyfile\necho \"OUTPUT_DIRECTORY = $DOCSET_PATH\" >> $TEMP_DIR/Doxyfile\necho \"RECURSIVE = YES\" >> $TEMP_DIR/Doxyfile\necho \"EXTRACT_ALL = YES\" >> $TEMP_DIR/Doxyfile\necho \"JAVADOC_AUTOBRIEF = YES\" >> $TEMP_DIR/Doxyfile\necho \"GENERATE_DOCSET = YES\" >> $TEMP_DIR/Doxyfile\necho \"GENERATE_LATEX = NO\" >> $TEMP_DIR/Doxyfile\necho \"DOCSET_FEEDNAME = $PRODUCT_NAME Documentation\" >> $TEMP_DIR/Doxyfile\necho \"DOCSET_BUNDLE_ID = $COMPANY_RDOMAIN_PREFIX.$PRODUCT_NAME\" >> $TEMP_DIR/Doxyfile\necho \"EXCLUDE_PATTERNS = \\\"Libraries\\\"\" >> $TEMP_DIR/Doxyfile\n\n$DOXYGEN_PATH $TEMP_DIR/Doxyfile\n\nmake -C $DOCSET_PATH/html install\n\nrm -f $TEMP_DIR/loadDocSet.scpt\n\necho \"tell application \\\"Xcode\\\"\" >> $TEMP_DIR/loadDocSet.scpt\necho \"load documentation set with path \\\"/Users/$USER/Library/Developer/Shared/Documentation/DocSets/$COMPANY_RDOMAIN_PREFIX.$PRODUCT_NAME.docset\\\"\" >> $TEMP_DIR/loadDocSet.scpt\necho \"end tell\" >> $TEMP_DIR/loadDocSet.scpt\n\nosascript $TEMP_DIR/loadDocSet.scpt\n\nexit 0";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C42493012AAA5C400ED4DE7 /* HubKit.m in Sources */,
+				2C4249B112AAC68100ED4DE7 /* HKGithubAPI.m in Sources */,
+				2C4249D112AACE6700ED4DE7 /* HKGithubUser.m in Sources */,
+				2C424A1A12AADDA600ED4DE7 /* HKGithubConnection.m in Sources */,
+				2C424AC912AAF30200ED4DE7 /* NSObject+SBJSON.m in Sources */,
+				2C424ACB12AAF30200ED4DE7 /* NSString+SBJSON.m in Sources */,
+				2C424ACD12AAF30200ED4DE7 /* SBJsonBase.m in Sources */,
+				2C424ACF12AAF30200ED4DE7 /* SBJsonParser.m in Sources */,
+				2C424AD112AAF30200ED4DE7 /* SBJsonWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMPANY_RDOMAIN_PREFIX = com.beyondthecorner;
+				COPY_PHASE_STRIP = NO;
+				DOXYGEN_PATH = /usr/local/bin/doxygen;
+				DSTROOT = /tmp/HubKit.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HubKit_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = HubKit;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/HubKit.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HubKit_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = HubKit;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "HubKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "HubKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
