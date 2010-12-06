@@ -19,25 +19,11 @@
  limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
-#import "HubKit.h"
+#import <UIKit/UIKit.h>
 
 
-/*!
- This class is responsible for handling requests and responses from
- the Github API.
- */
-@interface HKGithubConnection : NSObject {
+@protocol HKGithubAPIObject
 
-}
-
-/*!
- Make a request to the Github API.
- 
- @param apiQuery This is the specifics of the API query you want to make
- including the method to call and any parameters.
- @param error Any errors 
- */
-+ (NSDictionary *)makeAPIRequest:(NSString *)apiQuery error:(NSError **)error;
+- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

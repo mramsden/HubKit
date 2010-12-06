@@ -26,6 +26,9 @@
 		2C424ACF12AAF30200ED4DE7 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C424AC412AAF30200ED4DE7 /* SBJsonParser.m */; };
 		2C424AD012AAF30200ED4DE7 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C424AC512AAF30200ED4DE7 /* SBJsonWriter.h */; };
 		2C424AD112AAF30200ED4DE7 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C424AC612AAF30200ED4DE7 /* SBJsonWriter.m */; };
+		2CE107D012AD7DDC00E19CE1 /* HKGithubRepository.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE107CE12AD7DDC00E19CE1 /* HKGithubRepository.h */; };
+		2CE107D112AD7DDC00E19CE1 /* HKGithubRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE107CF12AD7DDC00E19CE1 /* HKGithubRepository.m */; };
+		2CE107D712AD865900E19CE1 /* HKGithubAPIObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE107D612AD865900E19CE1 /* HKGithubAPIObject.h */; };
 		AA747D9F0F9514B9006C5449 /* HubKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* HubKit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +53,9 @@
 		2C424AC412AAF30200ED4DE7 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		2C424AC512AAF30200ED4DE7 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		2C424AC612AAF30200ED4DE7 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		2CE107CE12AD7DDC00E19CE1 /* HKGithubRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKGithubRepository.h; sourceTree = "<group>"; };
+		2CE107CF12AD7DDC00E19CE1 /* HKGithubRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKGithubRepository.m; sourceTree = "<group>"; };
+		2CE107D612AD865900E19CE1 /* HKGithubAPIObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKGithubAPIObject.h; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* HubKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubKit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libHubKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHubKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,8 +108,11 @@
 				2C42492E12AAA5C400ED4DE7 /* HubKit.m */,
 				2C4249AE12AAC68100ED4DE7 /* HKGithubAPI.h */,
 				2C4249AF12AAC68100ED4DE7 /* HKGithubAPI.m */,
+				2CE107D612AD865900E19CE1 /* HKGithubAPIObject.h */,
 				2C4249CE12AACE6700ED4DE7 /* HKGithubUser.h */,
 				2C4249CF12AACE6700ED4DE7 /* HKGithubUser.m */,
+				2CE107CE12AD7DDC00E19CE1 /* HKGithubRepository.h */,
+				2CE107CF12AD7DDC00E19CE1 /* HKGithubRepository.m */,
 				2C424A1712AADDA600ED4DE7 /* HKGithubConnection.h */,
 				2C424A1812AADDA600ED4DE7 /* HKGithubConnection.m */,
 			);
@@ -162,6 +171,8 @@
 				2C424ACC12AAF30200ED4DE7 /* SBJsonBase.h in Headers */,
 				2C424ACE12AAF30200ED4DE7 /* SBJsonParser.h in Headers */,
 				2C424AD012AAF30200ED4DE7 /* SBJsonWriter.h in Headers */,
+				2CE107D012AD7DDC00E19CE1 /* HKGithubRepository.h in Headers */,
+				2CE107D712AD865900E19CE1 /* HKGithubAPIObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +252,7 @@
 				2C424ACD12AAF30200ED4DE7 /* SBJsonBase.m in Sources */,
 				2C424ACF12AAF30200ED4DE7 /* SBJsonParser.m in Sources */,
 				2C424AD112AAF30200ED4DE7 /* SBJsonWriter.m in Sources */,
+				2CE107D112AD7DDC00E19CE1 /* HKGithubRepository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

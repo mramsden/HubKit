@@ -10,7 +10,7 @@
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
  
- http://www.apache.org/license/LICENSE-2.0
+ http://www.apache.org/licenses/LICENSE-2.0
  
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,6 +20,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "HKGithubAPIObject.h"
 
 /*!
  This object represents a GitHub user retrieved from the API. For
@@ -27,12 +28,13 @@
  
  @see https://develop.github.com/p/users.html
  */
-@interface HKGithubUser : NSObject {
+@interface HKGithubUser : NSObject <HKGithubAPIObject> {
 	@private
 	NSUInteger _publicGistCount, _publicRepoCount, _totalPrivateRepoCount, _collaborators, _ownedPrivateRepoCount, _privateGistCount;
 	NSString *_login, *_name, *_company, *_location, *_email, *_blog;
 	NSNumber *_userId, *_diskUsage;
 	BOOL _authenticated;
+	NSArray *_watchedRepositories;
 }
 
 /*!
@@ -60,13 +62,6 @@
 @property (nonatomic,readonly) NSNumber *diskUsage;
 @property (nonatomic,readonly) NSUInteger ownedPrivateRepoCount;
 @property (nonatomic,readonly) NSUInteger privateGistCount;
-
-/*!
- Initialise the object with the supplied dictionary.
- 
- @param dictionary This is the dictionary to initialise the object with.
- @return The HKGithubUser object with the populated values.
- */
-- (id)initWithDictionary:(NSDictionary *)dictionary;
+@property (nonatomic,retain) NSArray *watchedRepositories;
 
 @end

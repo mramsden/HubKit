@@ -10,7 +10,7 @@
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
  
- http://www.apache.org/license/LICENSE-2.0
+ http://www.apache.org/licenses/LICENSE-2.0
  
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
@@ -96,3 +96,10 @@ void HKSetApiKey(NSString *apiKey);
  @return The initialised GithubAPI object.
  */
 HKGithubAPI * HKGetGithubAPI(NSError **error);
+
+/*!
+ Frees the current instance of the HKGithubAPI object if there is one.
+ This should be done before attempting to change the supplied username
+ and password.
+ */
+void HKGithubAPIFree();
