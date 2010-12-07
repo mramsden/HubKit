@@ -28,13 +28,12 @@
  
  @see https://develop.github.com/p/users.html
  */
-@interface HKGithubUser : NSObject <HKGithubAPIObject> {
+@interface HKGithubUser : NSObject {
 	@private
 	NSUInteger _publicGistCount, _publicRepoCount, _totalPrivateRepoCount, _collaborators, _ownedPrivateRepoCount, _privateGistCount;
 	NSString *_login, *_name, *_company, *_location, *_email, *_blog;
 	NSNumber *_userId, *_diskUsage;
 	BOOL _authenticated;
-	NSArray *_watchedRepositories;
 }
 
 /*!
@@ -62,6 +61,7 @@
 @property (nonatomic,readonly) NSNumber *diskUsage;
 @property (nonatomic,readonly) NSUInteger ownedPrivateRepoCount;
 @property (nonatomic,readonly) NSUInteger privateGistCount;
-@property (nonatomic,retain) NSArray *watchedRepositories;
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

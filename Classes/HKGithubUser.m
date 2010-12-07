@@ -34,14 +34,14 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
 	if ((self = [super init])) {
-		_userId = [[dictionary objectForKey:@"id"] retain];
-		_login = [[dictionary objectForKey:@"login"] retain];
-		_name = [[dictionary objectForKey:@"name"] retain];
-		_company = [[dictionary objectForKey:@"company"] retain];
-		_location = [[dictionary objectForKey:@"location"] retain];
-		_email = [[dictionary objectForKey:@"email"] retain];
-		_blog = [[dictionary objectForKey:@"blog"] retain];
-		_diskUsage = [[dictionary objectForKey:@"diskUsage"] retain];
+		_userId = [[dictionary objectForKey:@"id"] copy];
+		_login = [[dictionary objectForKey:@"login"] copy];
+		_name = [[dictionary objectForKey:@"name"] copy];
+		_company = [[dictionary objectForKey:@"company"] copy];
+		_location = [[dictionary objectForKey:@"location"] copy];
+		_email = [[dictionary objectForKey:@"email"] copy];
+		_blog = [[dictionary objectForKey:@"blog"] copy];
+		_diskUsage = [[dictionary objectForKey:@"diskUsage"] copy];
 		_publicGistCount = [[dictionary objectForKey:@"public_gist_count"] integerValue];
 		_publicRepoCount = [[dictionary objectForKey:@"public_repo_count"] integerValue];
 		_totalPrivateRepoCount = [[dictionary objectForKey:@"total_private_repo_count"] integerValue];
@@ -52,6 +52,10 @@
 	}
 	
 	return self;
+}
+
+- (NSString *)description {
+	return [NSString stringWithFormat:@"%@: %@", [self class], _login];
 }
 
 #pragma mark -

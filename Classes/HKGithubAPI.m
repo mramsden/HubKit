@@ -53,7 +53,7 @@
 
 - (HKGithubUser *)authenticatedUser {
 	if (authenticatedUser == nil) {
-		NSDictionary *userData = [HKGithubConnection makeAPIRequest:[NSString stringWithFormat:@"/user/show/%@", _username] error:nil];
+		NSDictionary *userData = [[HKGithubConnection makeAPIRequest:[NSString stringWithFormat:@"/user/show/%@", _username] error:nil] objectForKey:@"user"];
 		if (userData != nil) {
 			authenticatedUser = [[HKGithubUser alloc] initWithDictionary:userData];
 		}

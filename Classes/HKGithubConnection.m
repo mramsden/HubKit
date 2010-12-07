@@ -58,8 +58,10 @@ static NSString * const GithubAPIFormatString = @"json";
 	NSError *connectionError;
 	NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&connectionError];
 	if (responseData != nil) {
+		NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 		SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
-		apiData = [jsonParser objectWithString:[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]];
+		apiData = [jsonParser objectWithString:responseString];
+		[responseString release];
 		[jsonParser release];
 		
 		if ([apiData objectForKey:@"error"]) {
