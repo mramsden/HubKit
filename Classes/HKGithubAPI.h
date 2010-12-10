@@ -32,42 +32,38 @@
 	NSString *_password;
 	NSString *_apiKey;
 	HKGithubUser *authenticatedUser;
+	BOOL _useSecureAPI;
 }
 
 /*!
  The username being used by this GitHubAPI object.
  */
-@property (nonatomic,readonly) NSString *username;
+@property (nonatomic,retain) NSString *username;
 
 /*!
  The password being used by this GitHubAPI object.
  */
-@property (nonatomic,readonly) NSString *password;
+@property (nonatomic,retain) NSString *password;
 
 /*!
  The apiKey being used by this GitHubAPI object.
  */
-@property (nonatomic,readonly) NSString *apiKey;
+@property (nonatomic,retain) NSString *apiKey;
 
 /*!
- Initialise the GitHubAPI object with the supplied username and password.
- 
- @param username The username to use.
- @param password The password to use.
- @return The initialised GitHubAPI object.
+ Indicates whether the secure API should be used or not. By default
+ the secure API will be used. Changing this value will affect all
+ subsequent requests made.
  */
-- (id)initWithUsername:(NSString *)username password:(NSString *)password;
+@property (nonatomic,assign) BOOL useSecureAPI;
 
-/*!
- Initialise the GitHubAPI object with the supplied username and apiKey.
- 
- @param username The username to use.
- @param apiKey The apiKey to use.
- @return The initialised GitHubAPI object.
- */
-- (id)initWithUsername:(NSString *)username apiKey:(NSString *)apiKey;
++ (HKGithubAPI *)sharedGithubAPI;
 
-- (HKGithubUser *)authenticatedUser;
++ (HKGithubAPI *)sharedGithubAPIWithUsername:(NSString *)username password:(NSString *)password;
+
++ (HKGithubAPI *)sharedGithubAPIWithUsername:(NSString *)username apiKey:(NSString *)apiKey;
+
+- (HKGithubUser *)authenticatedUser:(NSError **)error;
 
 - (NSString *)passwordWithToken;
 

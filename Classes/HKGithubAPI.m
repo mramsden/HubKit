@@ -23,26 +23,40 @@
 #import "HKGithubConnection.h"
 
 
+static HKGithubAPI *_SharedGithubAPI = nil;
+
 @implementation HKGithubAPI
 
-@synthesize username = _username, password = _password, apiKey = _apiKey;
+@synthesize username = _username, password = _password, apiKey = _apiKey, useSecureAPI = _useSecureAPI;
 
 #pragma mark -
 #pragma mark Initialisation methods
 
-- (id)initWithUsername:(NSString *)username password:(NSString *)password {
-	if ((self = [super init])) {
-		_username = [username retain];
-		_password = [password retain];
-	}
-	
-	return self;
++ (HKGithubAPI *)sharedGithubAPI {
+	return _SharedGithubAPI;
 }
 
-- (id)initWithUsername:(NSString *)username apiKey:(NSString *)apiKey {
++ (HKGithubAPI *)sharedGithubAPIWithUsername:(NSString *)username apiKey:(NSString *)apiKey {
+	[_SharedGithubAPI release];
+	_SharedGithubAPI = [[HKGithubAPI alloc] init];
+	_SharedGithubAPI.username = username;
+	_SharedGithubAPI.apiKey = apiKey;
+	
+	return _SharedGithubAPI;
+}
+
++ (HKGithubAPI *)sharedGithubAPIWithUsername:(NSString *)username password:(NSString *)password {
+	[_SharedGithubAPI release];
+	_SharedGithubAPI = [[HKGithubAPI alloc] init];
+	_SharedGithubAPI.username = username;
+	_SharedGithubAPI.password = password;
+	
+	return _SharedGithubAPI;
+}
+
+- (id)init {
 	if ((self = [super init])) {
-		_username = [username retain];
-		_apiKey = [apiKey retain];
+		_useSecureAPI = YES;
 	}
 	
 	return self;
@@ -51,7 +65,7 @@
 #pragma mark -
 #pragma mark Public methods
 
-- (HKGithubUser *)authenticatedUser {
+- (HKGithubUser *)authenticatedUser:(NSError **)error {
 	if (authenticatedUser == nil) {
 		NSDictionary *userData = [[HKGithubConnection makeAPIRequest:[NSString stringWithFormat:@"/user/show/%@", _username] error:nil] objectForKey:@"user"];
 		if (userData != nil) {

@@ -31,7 +31,7 @@ static NSString * const GithubAPIFormatString = @"json";
 + (NSDictionary *)makeAPIRequest:(NSString *)apiQuery error:(NSError **)error {
 	NSDictionary *apiData = nil;
 	NSMutableString *urlString = [[NSMutableString alloc] init];
-	if (HKUseSecureAPI()) {
+	if ([HKGithubAPI sharedGithubAPI].useSecureAPI) {
 		[urlString appendString:GithubAPIHTTPSURLString];
 	} else {
 		[urlString appendString:GithubAPIHTTPURLString];
@@ -41,7 +41,7 @@ static NSString * const GithubAPIFormatString = @"json";
 	
 	NSURL *apiQueryURL = [NSURL URLWithString:urlString];
 	
-	HKGithubAPI *githubApi = HKGetGithubAPI(NULL);
+	HKGithubAPI *githubApi = [HKGithubAPI sharedGithubAPI];
 	NSURLCredential *credential = [NSURLCredential credentialWithUser:githubApi.username 
 															 password:githubApi.apiKey != nil ? [githubApi passwordWithToken] : githubApi.password
 														  persistence:NSURLCredentialPersistenceForSession];
