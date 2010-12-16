@@ -22,3 +22,46 @@
 #import "HubKit.h"
 
 NSString *HKErrorDomain = @"HubKitErrorDomain";
+
+@interface HubKit ()
+
++ (HubKitConfigurationManager *)configurationManager;
+
+@end
+
+@implementation HubKit 
+
+static HubKitConfigurationManager *_hkConfigurationManager = nil;
+
++ (void)setDefaultUsername:(NSString *)defaultUsername {
+	[[HubKit configurationManager] setUsername:defaultUsername];
+}
+
++ (void)setDefaultPassword:(NSString *)defaultPassword {
+	[[HubKit configurationManager] setPassword:defaultPassword];
+}
+
++ (void)setDefaultApiKey:(NSString *)defaultApiKey {
+	[[HubKit configurationManager] setApiKey:defaultApiKey];
+}
+
++ (HKPreferredCredential)preferredCredential {
+	return [[HubKit configurationManager] preferredCredential];
+}
+
++ (void)setPreferredCredential:(HKPreferredCredential)preferredCredential {
+	[[HubKit configurationManager] setPreferredCredential:preferredCredential];
+}
+
+#pragma mark -
+#pragma mark Private helper methods
+
++ (HubKitConfigurationManager *)configurationManager {
+	if (_hkConfigurationManager == nil) {
+		_hkConfigurationManager = [[HubKitConfigurationManager alloc] init];
+	}
+	
+	return _hkConfigurationManager;
+}
+
+@end

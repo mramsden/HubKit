@@ -31,6 +31,8 @@
 		2CE107D712AD865900E19CE1 /* HKGithubAPIObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE107D612AD865900E19CE1 /* HKGithubAPIObject.h */; };
 		AA747D9F0F9514B9006C5449 /* HubKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* HubKit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		F81E30FF12BAB5EB002D1538 /* HubKitConfigurationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F81E30FD12BAB5EB002D1538 /* HubKitConfigurationManager.h */; };
+		F81E310012BAB5EB002D1538 /* HubKitConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F81E30FE12BAB5EB002D1538 /* HubKitConfigurationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		AA747D9E0F9514B9006C5449 /* HubKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubKit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libHubKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHubKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81E30FD12BAB5EB002D1538 /* HubKitConfigurationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubKitConfigurationManager.h; sourceTree = "<group>"; };
+		F81E30FE12BAB5EB002D1538 /* HubKitConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HubKitConfigurationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 			children = (
 				2C42492D12AAA5C400ED4DE7 /* HubKit.h */,
 				2C42492E12AAA5C400ED4DE7 /* HubKit.m */,
+				F81E30FD12BAB5EB002D1538 /* HubKitConfigurationManager.h */,
+				F81E30FE12BAB5EB002D1538 /* HubKitConfigurationManager.m */,
 				2C4249AE12AAC68100ED4DE7 /* HKGithubAPI.h */,
 				2C4249AF12AAC68100ED4DE7 /* HKGithubAPI.m */,
 				2CE107D612AD865900E19CE1 /* HKGithubAPIObject.h */,
@@ -173,6 +179,7 @@
 				2C424AD012AAF30200ED4DE7 /* SBJsonWriter.h in Headers */,
 				2CE107D012AD7DDC00E19CE1 /* HKGithubRepository.h in Headers */,
 				2CE107D712AD865900E19CE1 /* HKGithubAPIObject.h in Headers */,
+				F81E30FF12BAB5EB002D1538 /* HubKitConfigurationManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +260,7 @@
 				2C424ACF12AAF30200ED4DE7 /* SBJsonParser.m in Sources */,
 				2C424AD112AAF30200ED4DE7 /* SBJsonWriter.m in Sources */,
 				2CE107D112AD7DDC00E19CE1 /* HKGithubRepository.m in Sources */,
+				F81E310012BAB5EB002D1538 /* HubKitConfigurationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
