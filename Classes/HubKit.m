@@ -53,6 +53,14 @@ static HubKitConfigurationManager *_hkConfigurationManager = nil;
 	[[HubKit configurationManager] setPreferredCredential:preferredCredential];
 }
 
++ (BOOL)useSecureAPI {
+	return [[HubKit configurationManager] useSecureConnection];
+}
+
++ (void)setUseSecureAPI:(BOOL)useSecureAPI {
+	[[HubKit configurationManager] setUseSecureConnection:useSecureAPI];
+}
+
 #pragma mark -
 #pragma mark Private helper methods
 

@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ GitHub API HTTP URL string.
+ */
+extern NSString * const GitHubHTTPURLString;
+
+/*!
+ GitHub API HTTPS URL string.
+ */
+extern NSString * const GitHubHTTPSURLString;
+
 typedef enum {
 	HKApiKeyPreferredCredential,
 	HKPasswordPreferredCredential
@@ -18,11 +28,13 @@ typedef enum {
 	NSString *username;
 	NSString *password;
 	NSString *apiKey;
+	BOOL useSecureConnection;
 }
 
 @property (nonatomic,assign) HKPreferredCredential preferredCredential;
 @property (nonatomic,retain) NSString *username;
 @property (nonatomic,retain) NSString *password;
 @property (nonatomic,retain) NSString *apiKey;
+@property (nonatomic,assign) BOOL useSecureConnection;
 
 @end

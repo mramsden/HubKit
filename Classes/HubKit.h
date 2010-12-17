@@ -101,4 +101,19 @@ typedef enum {
  */
 + (void)setPreferredCredential:(HKPreferredCredential)preferredCredential;
 
+/*!
+ Returns whether HubKit is using the secure api to connect to GitHub.
+ 
+ @return Returns YES if it is using the secure api, NO otherwise.
+ */
++ (BOOL)useSecureAPI;
+
+/*!
+ Sets whether HubKit should use the secure api to connect to GitHub. By default
+ HubKit will use the secure API.
+ 
+ @param useSecureAPI Set this to YES to instruct HubKit to use the secure api.
+ */
++ (void)setUseSecureAPI:(BOOL)useSecureAPI;
+
 @end
