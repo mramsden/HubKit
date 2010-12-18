@@ -21,13 +21,14 @@
 
 #import "HKGithubAPI.h"
 #import "HKGithubConnection.h"
+#import "HubKitInternals.h"
 
 
 static HKGithubAPI *_SharedGithubAPI = nil;
 
 @implementation HKGithubAPI
 
-@synthesize username = _username, password = _password, apiKey = _apiKey, useSecureAPI = _useSecureAPI;
+@synthesize username = _username, password = _password, apiKey = _apiKey;
 
 #pragma mark -
 #pragma mark Initialisation methods
@@ -56,10 +57,17 @@ static HKGithubAPI *_SharedGithubAPI = nil;
 
 - (id)init {
 	if ((self = [super init])) {
-		_useSecureAPI = YES;
+		_useSecureAPI = [[HubKit sharedConfigurationManager] useSecureConnection];
 	}
 	
 	return self;
+}
+
+#pragma mark -
+#pragma mark Accessor methods
+
+- (BOOL)usingSecureAPI {
+	return _useSecureAPI;
 }
 
 #pragma mark -

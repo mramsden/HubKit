@@ -51,11 +51,9 @@
 @property (nonatomic,retain) NSString *apiKey;
 
 /*!
- Indicates whether the secure API should be used or not. By default
- the secure API will be used. Changing this value will affect all
- subsequent requests made.
+ Indicates if this GitHubAPI object is using the secure GitHubAPI.
  */
-@property (nonatomic,assign) BOOL useSecureAPI;
+@property (nonatomic,readonly) BOOL usingSecureAPI;
 
 + (HKGithubAPI *)sharedGithubAPI;
 

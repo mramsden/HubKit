@@ -20,51 +20,48 @@
  */
 
 #import "HubKit.h"
+#import "HubKitInternals.h"
 
 NSString *HKErrorDomain = @"HubKitErrorDomain";
-
-@interface HubKit ()
-
-+ (HubKitConfigurationManager *)configurationManager;
-
-@end
 
 @implementation HubKit 
 
 static HubKitConfigurationManager *_hkConfigurationManager = nil;
 
 + (void)setDefaultUsername:(NSString *)defaultUsername {
-	[[HubKit configurationManager] setUsername:defaultUsername];
+	[[HubKit sharedConfigurationManager] setUsername:defaultUsername];
 }
 
 + (void)setDefaultPassword:(NSString *)defaultPassword {
-	[[HubKit configurationManager] setPassword:defaultPassword];
+	[[HubKit sharedConfigurationManager] setPassword:defaultPassword];
 }
 
 + (void)setDefaultApiKey:(NSString *)defaultApiKey {
-	[[HubKit configurationManager] setApiKey:defaultApiKey];
+	[[HubKit sharedConfigurationManager] setApiKey:defaultApiKey];
 }
 
 + (HKPreferredCredential)preferredCredential {
-	return [[HubKit configurationManager] preferredCredential];
+	return [[HubKit sharedConfigurationManager] preferredCredential];
 }
 
 + (void)setPreferredCredential:(HKPreferredCredential)preferredCredential {
-	[[HubKit configurationManager] setPreferredCredential:preferredCredential];
+	[[HubKit sharedConfigurationManager] setPreferredCredential:preferredCredential];
 }
 
 + (BOOL)useSecureAPI {
-	return [[HubKit configurationManager] useSecureConnection];
+	return [[HubKit sharedConfigurationManager] useSecureConnection];
 }
 
 + (void)setUseSecureAPI:(BOOL)useSecureAPI {
-	[[HubKit configurationManager] setUseSecureConnection:useSecureAPI];
+	[[HubKit sharedConfigurationManager] setUseSecureConnection:useSecureAPI];
 }
 
 #pragma mark -
-#pragma mark Private helper methods
+#pragma mark Internal helper methods
 
-+ (HubKitConfigurationManager *)configurationManager {
+#ifndef DOXYGEN_IGNORE
+
++ (HubKitConfigurationManager *)sharedConfigurationManager {
 	if (_hkConfigurationManager == nil) {
 		_hkConfigurationManager = [[HubKitConfigurationManager alloc] init];
 	}
@@ -72,4 +69,5 @@ static HubKitConfigurationManager *_hkConfigurationManager = nil;
 	return _hkConfigurationManager;
 }
 
+#endif /* DOXYGEN_IGNORE */
 @end

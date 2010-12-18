@@ -33,6 +33,7 @@
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		F81E30FF12BAB5EB002D1538 /* HubKitConfigurationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F81E30FD12BAB5EB002D1538 /* HubKitConfigurationManager.h */; };
 		F81E310012BAB5EB002D1538 /* HubKitConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F81E30FE12BAB5EB002D1538 /* HubKitConfigurationManager.m */; };
+		F8C907C512BD054D00597E3B /* HubKitInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = F8C907C412BD054D00597E3B /* HubKitInternals.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		D2AAC07E0554694100DB518D /* libHubKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHubKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81E30FD12BAB5EB002D1538 /* HubKitConfigurationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubKitConfigurationManager.h; sourceTree = "<group>"; };
 		F81E30FE12BAB5EB002D1538 /* HubKitConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HubKitConfigurationManager.m; sourceTree = "<group>"; };
+		F8C907C412BD054D00597E3B /* HubKitInternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubKitInternals.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F8C907EF12BD091B00597E3B /* Internals */,
 				2C42492D12AAA5C400ED4DE7 /* HubKit.h */,
 				2C42492E12AAA5C400ED4DE7 /* HubKit.m */,
 				F81E30FD12BAB5EB002D1538 /* HubKitConfigurationManager.h */,
@@ -159,6 +162,14 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		F8C907EF12BD091B00597E3B /* Internals */ = {
+			isa = PBXGroup;
+			children = (
+				F8C907C412BD054D00597E3B /* HubKitInternals.h */,
+			);
+			name = Internals;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -180,6 +191,7 @@
 				2CE107D012AD7DDC00E19CE1 /* HKGithubRepository.h in Headers */,
 				2CE107D712AD865900E19CE1 /* HKGithubAPIObject.h in Headers */,
 				F81E30FF12BAB5EB002D1538 /* HubKitConfigurationManager.h in Headers */,
+				F8C907C512BD054D00597E3B /* HubKitInternals.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +253,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Build the doxygen documentation for the project and load the docset into Xcode.\n\nDOCSET_PATH=$SOURCE_ROOT/build/$PRODUCT_NAME.docset\n\nif ! [ -f $SOURCE_ROOT/Doxyfile ]\nthen\n\techo doxygen config file does not exist\n\t$DOXYGEN_PATH -g $SOURCE_ROOT/Doxyfile\nfi\n\ncp $SOURCE_ROOT/Doxyfile $TEMP_DIR/Doxyfile\n\necho \"INPUT = \\\"$SOURCE_ROOT\\\"\" >> $TEMP_DIR/Doxyfile\necho \"OUTPUT_DIRECTORY = $DOCSET_PATH\" >> $TEMP_DIR/Doxyfile\necho \"RECURSIVE = YES\" >> $TEMP_DIR/Doxyfile\necho \"EXTRACT_ALL = YES\" >> $TEMP_DIR/Doxyfile\necho \"JAVADOC_AUTOBRIEF = YES\" >> $TEMP_DIR/Doxyfile\necho \"GENERATE_DOCSET = YES\" >> $TEMP_DIR/Doxyfile\necho \"GENERATE_LATEX = NO\" >> $TEMP_DIR/Doxyfile\necho \"DOCSET_FEEDNAME = $PRODUCT_NAME Documentation\" >> $TEMP_DIR/Doxyfile\necho \"DOCSET_BUNDLE_ID = $COMPANY_RDOMAIN_PREFIX.$PRODUCT_NAME\" >> $TEMP_DIR/Doxyfile\necho \"EXCLUDE_PATTERNS = \\\"Libraries\\\"\" >> $TEMP_DIR/Doxyfile\n\n$DOXYGEN_PATH $TEMP_DIR/Doxyfile\n\nmake -C $DOCSET_PATH/html install\n\nrm -f $TEMP_DIR/loadDocSet.scpt\n\necho \"tell application \\\"Xcode\\\"\" >> $TEMP_DIR/loadDocSet.scpt\necho \"load documentation set with path \\\"/Users/$USER/Library/Developer/Shared/Documentation/DocSets/$COMPANY_RDOMAIN_PREFIX.$PRODUCT_NAME.docset\\\"\" >> $TEMP_DIR/loadDocSet.scpt\necho \"end tell\" >> $TEMP_DIR/loadDocSet.scpt\n\nosascript $TEMP_DIR/loadDocSet.scpt\n\nexit 0";
+			shellScript = "# Build the doxygen documentation for the project and load the docset into Xcode.\n\nDOCSET_PATH=$SOURCE_ROOT/build/$PRODUCT_NAME.docset\n\nif ! [ -f $SOURCE_ROOT/Doxyfile ]\nthen\n\techo doxygen config file does not exist\n\t$DOXYGEN_PATH -g $SOURCE_ROOT/Doxyfile\nfi\n\ncp $SOURCE_ROOT/Doxyfile $TEMP_DIR/Doxyfile\n\necho \"INPUT = \\\"$SOURCE_ROOT\\\"\" >> $TEMP_DIR/Doxyfile\necho \"OUTPUT_DIRECTORY = $DOCSET_PATH\" >> $TEMP_DIR/Doxyfile\necho \"RECURSIVE = YES\" >> $TEMP_DIR/Doxyfile\necho \"EXTRACT_ALL = YES\" >> $TEMP_DIR/Doxyfile\necho \"JAVADOC_AUTOBRIEF = YES\" >> $TEMP_DIR/Doxyfile\necho \"GENERATE_DOCSET = YES\" >> $TEMP_DIR/Doxyfile\necho \"GENERATE_LATEX = NO\" >> $TEMP_DIR/Doxyfile\necho \"DOCSET_FEEDNAME = $PRODUCT_NAME Documentation\" >> $TEMP_DIR/Doxyfile\necho \"DOCSET_BUNDLE_ID = $COMPANY_RDOMAIN_PREFIX.$PRODUCT_NAME\" >> $TEMP_DIR/Doxyfile\necho \"EXCLUDE_PATTERNS = \\\"Libraries\\\"\" >> $TEMP_DIR/Doxyfile\necho \"PREDEFINED = DOXYGEN_IGNORE\" >> $TEMP_DIR/Doxyfile\n\n$DOXYGEN_PATH $TEMP_DIR/Doxyfile\n\nmake -C $DOCSET_PATH/html install\n\nrm -f $TEMP_DIR/loadDocSet.scpt\n\necho \"tell application \\\"Xcode\\\"\" >> $TEMP_DIR/loadDocSet.scpt\necho \"load documentation set with path \\\"/Users/$USER/Library/Developer/Shared/Documentation/DocSets/$COMPANY_RDOMAIN_PREFIX.$PRODUCT_NAME.docset\\\"\" >> $TEMP_DIR/loadDocSet.scpt\necho \"end tell\" >> $TEMP_DIR/loadDocSet.scpt\n\nosascript $TEMP_DIR/loadDocSet.scpt\n\nexit 0";
 		};
 /* End PBXShellScriptBuildPhase section */
 
